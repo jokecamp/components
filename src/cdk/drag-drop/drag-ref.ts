@@ -233,7 +233,6 @@ export class DragRef<T = any> {
 
   /** Time at which the last dragging sequence was started. */
   private _dragStartTime: number;
-
   /** Cached reference to the boundary element. */
   private _boundaryElement: HTMLElement | null = null;
 
@@ -971,6 +970,7 @@ export class DragRef<T = any> {
         isPointerOverContainer,
         distance,
         pointerPosition,
+        event
       );
       this._dropContainer = this._initialContainer;
     });
